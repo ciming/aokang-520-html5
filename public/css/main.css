@@ -1,0 +1,318 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+input,
+textarea,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  background-color: #fff;
+  color: #131313;
+  font-family: arial, 'Microsoft Yahei', '微软雅黑';
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+}
+input {
+  padding: 1px;
+  background-color: white;
+  border: 2px inset;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  -webkit-rtl-ordering: logical;
+  -webkit-user-select: text;
+  cursor: auto;
+}
+textarea,
+keygen,
+select,
+button {
+  margin: 0em;
+  font: 11px '.SFNSText-Regular';
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+}
+input,
+button {
+  outline: none;
+}
+/* 屏蔽文本框高亮 */
+textarea {
+  outline: none;
+}
+body {
+  background-color: #000;
+}
+#wrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 10rem;
+  height: 100%;
+  margin-left: -5rem;
+  background-color: #fff;
+}
+#Canvas {
+  width: 100%;
+}
+.form {
+  position: fixed;
+  width: 8rem;
+  height: 4.5rem;
+  padding: 0.5rem;
+  left: 50%;
+  top: 50%;
+  margin-top: -2rem;
+  margin-left: -4rem;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.name-ipt {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background: none;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #fff;
+  padding: 0.3rem 0;
+}
+.submit {
+  display: block;
+  margin: 0 auto;
+  font-size: 0.5rem;
+  width: 5rem;
+  height: 1rem;
+  text-align: center;
+  background-color: #d0000f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+.submit:hover,
+.submit:active {
+  background-color: #ff0416;
+}
+.loading {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -0.78125rem;
+  margin-top: -0.9376rem;
+  width: 1.5625rem;
+  height: 1.875rem;
+  text-align: center;
+  font-size: 10px;
+}
+.spinner > div {
+  background-color: #67CF22;
+  height: 100%;
+  width: 0.1875rem;
+  display: inline-block;
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+@-webkit-keyframes stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1.0);
+  }
+}
+@keyframes stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+.toast {
+  position: fixed;
+  display: none;
+  width: 100%;
+  bottom: 3rem;
+  z-index: 2000;
+  text-align: center;
+}
+.toast .toast-alert {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.35rem;
+  color: #fff;
+  font-size: 0.45rem;
+  border-radius: 0.525rem;
+}
+/*# sourceMappingURL=main.css.map */

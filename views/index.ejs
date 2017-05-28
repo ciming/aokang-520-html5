@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>窝心表白墙，陪你点亮520</title><meta name="keywords" content="霸气简单粗暴，保证你分分钟撩妹斩男牵手成功！">
+<meta name="description" content="霸气简单粗暴，保证你分分钟撩妹斩男牵手成功！">
+		<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/easeljs.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<img src="img/fm.jpg" style="display: none;" />
+		<div id="wrapper">
+			<canvas id="Canvas" width="400" height="711"></canvas>
+			<img src="" id="downPic" />
+			<div class="form">
+				<form action="/pic" method="post">
+					<input type="text" placeholder="请输入姓名" name="username" class="name-ipt" id="name-ipt" />
+					<button type="button" class="submit" id="btn">生&nbsp;&nbsp;&nbsp;&nbsp;成</button>
+				</form>
+			</div>
+		</div>
+		<div class="loading">
+			<div class="spinner">
+				<div class="rect1"></div>
+				<div class="rect2"></div>
+				<div class="rect3"></div>
+				<div class="rect4"></div>
+				<div class="rect5"></div>
+			</div>
+		</div>
+		<div class="toast">
+			<div class="toast-alert">
+				<div class="toast-msg"></div>
+			</div>
+		</div>
+		<a href="" id="jumplink" target="_blank"></a>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			wx.config({
+		
+			    appId: '<%- appId %>', // 必填，公众号的唯一标识
+			    timestamp:<%- timestamp %> , // 必填，生成签名的时间戳
+			    nonceStr: '<%- noncestr %>', // 必填，生成签名的随机串
+			    signature: "<%- signature %>",// 必填，签名，见附录1
+			    jsApiList: ['onMenuShareAppMessage', 'onMenuShareTimeline', 'onMenuShareQQ']  // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+			});
+			wx.ready(function () {
+		        wx.onMenuShareAppMessage({
+		            title: '窝心表白墙，陪你点亮520', // 分享标题
+		            desc: '霸气简单粗暴，保证你分分钟撩妹斩男牵手成功！', // 分享描述
+		            link: 'http://ak.12studio.cn/', // 分享链接
+		            imgUrl: 'http://ak.12studio.cn/img/fm.jpg', // 分享图标	
+		            type: '', // 分享类型,music、video或link，不填默认为link
+		            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+		            success: function () {
+		            },
+		            cancel: function () {
+		            }
+		        });
+		        wx.onMenuShareTimeline({
+		            title: '窝心表白墙，陪你点亮520', // 分享标题
+		            link: 'http://ak.12studio.cn/', // 分享链接
+		            imgUrl: 'http://ak.12studio.cn/img/fm.jpg', // 分享图标
+		            success: function () {
+		            },
+		            cancel: function () {
+		            }
+		        });
+		        wx.onMenuShareQQ({
+		            title: '窝心表白墙，陪你点亮520', // 分享标题
+		            desc: '霸气简单粗暴，保证你分分钟撩妹斩男牵手成功！', // 分享描述
+		            link: 'http://ak.12studio.cn/', // 分享链接
+		            imgUrl: 'http://ak.12studio.cn/img/fm.jpg', // 分享图标
+		            success: function () {
+		            },
+		            cancel: function () {
+		            }
+		        });
+		    });
+		    wx.error(function (res) {
+		        console.log(res)
+		    });
+		    
+		</script>
+	</body>
+
+</html>

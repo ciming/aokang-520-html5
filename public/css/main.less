@@ -1,0 +1,145 @@
+@import "normalize"; 
+
+body{
+    background-color: #000;
+    
+}
+#wrapper{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10rem;
+    height: 100%;
+    margin-left: -5rem;
+    background-color: #fff; 
+    
+}
+#Canvas{
+    width: 100%;
+}
+
+.form{
+    position: fixed;
+    width: 8rem;
+    height: 4.5rem;
+    padding: 0.5rem;
+    left: 50%;
+    top: 50%;
+    margin-top: -2rem;
+    margin-left: -4rem;
+    background-color: rgba(0,0,0,0.3);
+    
+}
+
+.name-ipt{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background:none;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #fff;
+    padding: 0.3rem 0;
+}
+
+.submit{
+    display: block;
+    margin: 0 auto;
+    font-size: 0.5rem;
+    width: 5rem;
+    height: 1rem;
+    text-align: center;
+    background-color: #d0000f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    &:hover,&:active{
+        background-color: lighten(#d0000f,10%);
+    }
+    
+}
+.loading{
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); 
+}
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left:-0.78125rem ;
+  margin-top: -0.9376rem;
+  width:1.5625rem;
+  height: 1.875rem;
+  text-align: center;
+  font-size: 10px;
+}
+ 
+.spinner > div {
+  background-color: #67CF22;
+  height: 100%;
+  width: 0.1875rem;
+  display: inline-block;
+   
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+ 
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+ 
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+ 
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+ 
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+ 
+@-webkit-keyframes stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) } 
+  20% { -webkit-transform: scaleY(1.0) }
+}
+ 
+@keyframes stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+.toast {
+    position: fixed;
+    display: none;
+    width: 100%;
+    bottom: 3rem;
+    z-index: 2000;
+    text-align: center;
+    .toast-alert {
+        display: inline-block;
+        background-color: rgba(0,0,0,0.5);
+        padding: 0.35rem;
+        color: #fff;
+        font-size: 0.45rem;
+        border-radius: 0.525rem;
+    }
+}
